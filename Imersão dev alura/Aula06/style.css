@@ -1,0 +1,68 @@
+* {
+  text-align: center;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 400px;
+  background-image: url("./imagens/football.jpeg");
+  background-color: #111111;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.page-title {
+  color: black;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: black;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+table {
+  border: 3px solid rgb(66, 66, 66);
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+th,
+tr,
+td {
+  border: 2px solid rgb(66, 66, 66);
+  padding: 5px;
+}
+
+button {
+  padding: 8px;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+#divTable{
+  background-color: rgba(211, 211, 211, 0.69);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+#buttonTeam {
+  margin-top: 30px;
+}

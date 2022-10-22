@@ -1,0 +1,18 @@
+//Adiciona imagem a tela pelo link
+function adicionarFilme() {
+    var filmeFavorito = document.getElementById("filme").value;
+    if (filmeFavorito.endsWith(".jpg")) {
+      adicionarFilmeNaTela(filmeFavorito);
+    } else {
+      console.error("Endereço de filme inválido!");
+    }
+    document.getElementById("filme").value = "";
+  }
+  
+  function adicionarFilmeNaTela(filme) {
+    var elementoFilmeFavorito = "<img src=" + filme + ">";
+    var elementoListaFilmes = document.getElementById("listaFilmes");
+    elementoListaFilmes.innerHTML =
+      elementoListaFilmes.innerHTML + elementoFilmeFavorito;
+  }
+  
