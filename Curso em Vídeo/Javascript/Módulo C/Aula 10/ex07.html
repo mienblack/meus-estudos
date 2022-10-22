@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Valores</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.87);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        input[type="number"] {
+            width: 100px;
+        }
+
+        #resultado {
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Números</h1>
+
+    <input type="number" name="number1" id="number1" placeholder="1º Número"><strong> + </strong>
+    <input type="number" name="number2" id="number2" placeholder="2º Número">
+    <input type="button" value="Somar" onclick="somar()">
+
+    <div id="resultado"></div>
+
+    <script src="./ex07.js"></script>
+</body>
+</html>

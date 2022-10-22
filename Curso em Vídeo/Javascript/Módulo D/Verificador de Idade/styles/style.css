@@ -1,0 +1,54 @@
+body {
+    background-color: rgba(17, 90, 117, 0.773);
+    color: white;
+    text-align: center;
+    font: normal 15pt Arial;
+}
+
+header {
+
+}
+
+main {
+    width: 500px;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
+footer {
+    font-style: italic;
+    font-size: 0.7rem;
+}
+
+#divImage {
+    display: flex;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 40px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+#picture {
+    width: 250px;
+    align-self: center;
+}
+
+input[type="number"] {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+input[type="button"] {
+    padding: 5px 10px;
+    color:rgb(17, 90, 117);
+    font-weight: bold;
+    border: 1px solid black;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 03</title>
+
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.87);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        caption {
+            font-size: 2rem;
+            font-weight: bold;
+            background-color: whitesmoke;
+            color: black;
+            padding: 15px;
+        }
+
+        table {
+            border: 3px solid whitesmoke;
+            border-collapse: collapse;
+            width: 700px;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 15px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /*
+        .aqua {
+            background-color: aquamarine;
+        */
+
+        .container {
+            overflow: auto;
+        }
+
+        p {
+            padding-left: 20px;
+            text-align: justify;
+        }
+
+        p::first-letter {
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <colgroup>
+                <col class="aqua">
+                <col class="aqua">
+                <col class="aqua" span="3">
+            </colgroup>
+            <caption>Filmes Favoritos</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Grupo</th>
+                    <th scope="col">Nomes</th>
+                    <th scope="colgroup" colspan="3">Filmes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">Mulheres</th>
+                    <td>Ana Maria</td>
+                    <td>Alien</td>
+                    <td>Rambo</td>
+                    <td>Vingadores</td>
+                </tr>
+                <tr>
+                    <td>Beatriz Souza</td>
+                    <td>Hulk</td>
+                    <td>Inception</td>
+                    <td>Batman</td>
+                </tr>
+                <tr>
+                    <td>Fabiana Melo</td>
+                    <td>Oblivion</td>
+                    <td>Matrix</td>
+                    <td>Big Hero</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">Homens</th>
+                    <td>Bruno Mendonça</td>
+                    <td>Intocáveis</td>
+                    <td>Amnésia</td>
+                    <td>Gladiador</td>
+                </tr>
+                <tr>
+                    <td>Daniel Dias</td>
+                    <td>Senhor dos Anéis</td>
+                    <td>Han Solo</td>
+                    <td>Star Wars</td>
+                </tr>
+                <tr>
+                    <td>Diogo Lopes</td>
+                    <td>Toy Story</td>
+                    <td>Irmão Urso</td>
+                    <td>Divertidamente</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolorum voluptatum labore eum nihil repellendus maxime non, sed, fuga earum asperiores repellat! Temporibus iste odit unde. Quisquam officia numquam voluptas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius consequuntur error alias, fugit ducimus nobis perferendis cum? Facere blanditiis fugit rem. Nisi labore eaque enim quod quaerat totam repellendus maiores? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur quos magnam hic. Ad ex amet id sit incidunt provident deleniti repellat at voluptatum vitae. Nesciunt quisquam voluptatum illum quae eveniet?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolorum voluptatum labore eum nihil repellendus maxime non, sed, fuga earum asperiores repellat! Temporibus iste odit unde. Quisquam officia numquam voluptas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius consequuntur error alias, fugit ducimus nobis perferendis cum? Facere blanditiis fugit rem. Nisi labore eaque enim quod quaerat totam repellendus maiores? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur quos magnam hic. Ad ex amet id sit incidunt provident deleniti repellat at voluptatum vitae. Nesciunt quisquam voluptatum illum quae eveniet?</p>
+</body>
+</html>

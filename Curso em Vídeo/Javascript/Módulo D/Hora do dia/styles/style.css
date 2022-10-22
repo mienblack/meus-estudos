@@ -1,0 +1,45 @@
+body {
+    background-color: rgba(17, 90, 117, 0.773);
+    color: white;
+    text-align: center;
+    font: normal 15pt Arial;
+}
+
+header {
+
+}
+
+main {
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
+footer {
+    font-style: italic;
+    font-size: 0.7rem;
+}
+
+#msg {
+    margin-bottom: 40px;
+}
+
+#pic {
+    overflow: hidden;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+#imagem {
+    width: 250px;
+    height: 250px;
+}
