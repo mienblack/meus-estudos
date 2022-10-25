@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import lifeCycle from './components/lifeCycle.vue'
-import firstComponent from './components/firstComponent.vue'
+import lifeCycle from '../Vuejs/vue_project/src/components/lifeCycle.vue'
+import firstComponent from '../Vuejs/vue_project/src/components/firstComponent.vue'
 
 export default {
   name: 'App',
