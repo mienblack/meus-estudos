@@ -1,4 +1,4 @@
-# third-project
+# second
 
 ## Project setup
 ```
