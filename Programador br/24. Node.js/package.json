@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "math": "file:math"
+    "math": "file:math",
+    "sharp": "^0.31.1"
   }
 }
