@@ -1,25 +1,36 @@
 import config from "../config.json"
 import styled from "styled-components"
+import { CSSReset } from "../src/components/CSSReset"
+import Menu from "../src/components/Menu"
+import { StyledTimeline } from "../src/components/Timeline"
 
 function HomePage() {
-    const homePageStyle = { backgroundColor: "red" }
+    //const homePageStyle = { backgroundColor: "red" }
     return (
-        <div style={homePageStyle}>
-            <Menu></Menu>
-            <Header></Header>
-            <Timeline></Timeline>
-        </div>
+        <>
+            <CSSReset />
+            <div style={{
+                display: "flex",
+                flexDirection: "column",
+                flex: 1,
+                // backgroundColor: "red",
+            }}>
+                <Menu />
+                <Header />
+                <Timeline playlists={config.playlists} />
+            </div>
+        </>
     )
 }
 
 export default HomePage
-
+/*
 function Menu() {
     return (
         <div>Menu</div>
     )
 }
-
+*/
 const StyledHeader = styled.div`
 img {
     width: 70px;
@@ -29,6 +40,7 @@ img {
 .user-info {
     display: flex;
     align-items: center;
+    margin-top: 50px;
     width: 100%;
     padding: 16px 32px;
     gap: 16px;
@@ -39,7 +51,7 @@ function Header() {
         <StyledHeader>
             {/*<img src="" alt="" />*/}
             <section className="user-info">
-                <img src={`https://github.com/${config.gtihub}.png`} alt="profile" />
+                <img src={`https://github.com/${config.github}.png`} alt="profile" />
                 <div>
                     <h2>{config.name}</h2>
                     <p>{config.job}</p>
@@ -49,8 +61,31 @@ function Header() {
     )
 }
 
-function Timeline() {
+function Timeline(props) {
+    console.log(props.playlists)
+    const playlistNames = Object.keys(props.playlists)
     return (
-        <div>Timeline</div>
+        <StyledTimeline>
+            {playlistNames.map((playlistName) => {
+                const videos = props.playlists[playlistName]
+                return (
+                    <section>
+                        <h2>{playlistName}</h2>
+                        <div>
+                            {videos.map((video) => {
+                                return (
+                                    <a href={video.url}>
+                                        <img src={video.thumb} />
+                                        <span>
+                                            {video.title}
+                                        </span>
+                                    </a>
+                                )
+                            })}
+                        </div>
+                    </section>
+                )
+            })}
+        </StyledTimeline>
     )
 }
