@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import config from "../config.json"
 import styled from "styled-components"
-import { CSSReset } from "../src/components/CSSReset"
 import Menu from "../src/components/Menu"
 import { StyledTimeline } from "../src/components/Timeline"
 
@@ -11,14 +10,14 @@ function HomePage() {
     const [searchValue, setSearchValue] = useState("")
     return (
         <>
-            <CSSReset />
+
             <div style={{
                 display: "flex",
                 flexDirection: "column",
                 flex: 1,
                 // backgroundColor: "red",
             }}>
-                <Menu searchValue={searchValue} setSearchValue={setSearchValue}/>
+                <Menu searchValue={searchValue} setSearchValue={setSearchValue} />
                 <Header />
                 <Timeline searchValue={searchValue} playlists={config.playlists} />
             </div>
@@ -35,6 +34,9 @@ function Menu() {
 }
 */
 const StyledHeader = styled.div`
+
+background-color: ${({ theme }) => theme.backgroundLevel1};
+
 img {
     width: 70px;
     height: 70px;
@@ -42,7 +44,7 @@ img {
 }
 .user-info {
     display: flex;
-    align-items: center;
+    align-items: center;    
     width: 100%;
     padding: 16px 32px;
     gap: 16px;
