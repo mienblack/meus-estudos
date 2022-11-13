@@ -5,7 +5,6 @@ import Menu from "../src/components/Menu"
 import { StyledTimeline } from "../src/components/Timeline"
 
 function HomePage() {
-    //const homePageStyle = { backgroundColor: "red" }
 
     const [searchValue, setSearchValue] = useState("")
     return (
@@ -15,7 +14,6 @@ function HomePage() {
                 display: "flex",
                 flexDirection: "column",
                 flex: 1,
-                // backgroundColor: "red",
             }}>
                 <Menu searchValue={searchValue} setSearchValue={setSearchValue} />
                 <Header />
@@ -26,13 +24,7 @@ function HomePage() {
 }
 
 export default HomePage
-/*
-function Menu() {
-    return (
-        <div>Menu</div>
-    )
-}
-*/
+
 const StyledHeader = styled.div`
 
 background-color: ${({ theme }) => theme.backgroundLevel1};
@@ -72,8 +64,8 @@ function Header() {
 }
 
 function Timeline({ searchValue, ...props }) {
-    console.log(props.playlists)
     const playlistNames = Object.keys(props.playlists)
+
     return (
         <StyledTimeline>
             {playlistNames.map((playlistName) => {

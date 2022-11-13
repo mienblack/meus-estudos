@@ -40,7 +40,6 @@ const StyledSearch = styled.div`
 // Informação sempre desce
 
 export default function Search({ searchValue, setSearchValue }) {
-  console.log(searchValue)
   return (
     <StyledSearch>
       <input type="text" value={searchValue} onChange={(e) => {
