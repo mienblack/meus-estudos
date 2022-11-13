@@ -22,6 +22,10 @@ const PROJECT_URL = "https://bukxpizzeyiubtzgodgi.supabase.co"
 const PUBLIC_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ1a3hwaXp6ZXlpdWJ0emdvZGdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjgyOTk3OTgsImV4cCI6MTk4Mzg3NTc5OH0.9SkCxtTbHY12Ro1qMrr1ntiexMtANYja39wGO5Ei95Y"
 const supabase = createClient(PROJECT_URL, PUBLIC_KEY)
 
+function getThumbnail(url) {
+    return `https://img.youtube.com/vi/${url.split("v=")[1]}/hqdefault.jpg`;
+}
+
 export default function RegisterVideo(props) {
     console.log(supabase)
     const [formVisible, setFormVisible] = useState(false)
@@ -34,6 +38,20 @@ export default function RegisterVideo(props) {
                     e.preventDefault()
                     setFormVisible(false)
                     formRegister.clearForm()
+
+                    // Contrato entre o nosso Front e o BackEnd
+                    supabase.from("video").insert({
+                        title: formRegister.values.title,
+                        url: formRegister.values.url,
+                        thumb: getThumbnail(formRegister.values.url),
+                        playlist: "games",
+                    })
+                        .then((res) => {
+                            console.log(res);
+                        })
+                        .catch((err) => {
+                            console.log(err);
+                        })
                 }}>
                     <div>
                         <button type="button" className="close-modal" onClick={() => setFormVisible(false)}>X</button>
