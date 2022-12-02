@@ -1,0 +1,14 @@
+.list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.item {
+    text-decoration: none;
+    color: white;
+}
+
+.item:visited{
+    color: #555555;
+}

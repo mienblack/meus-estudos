@@ -1,0 +1,17 @@
+.socialList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.socialList svg {
+    cursor: pointer;
+    font-size: 1.4em;
+}
+
+.footer {
+background-color: #888888;
+padding: 10px 0;
+}
