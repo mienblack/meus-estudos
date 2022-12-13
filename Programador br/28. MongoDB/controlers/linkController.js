@@ -3,7 +3,7 @@ const Link = require('../models/Link')
 const redirect = async (req, res, next) => {
     let title = req.params.title
     try {
-        let doc = await Link.findOne({ title })
+        let doc = await Link.findOneAndUpdate({ title }, { $inc: { click: 1 } })
         if (doc) {
             res.redirect(doc.url)
         } else {
@@ -18,10 +18,10 @@ const addLink = async (req, res) => {
 
     let link = new Link(req.body)
     try {
-        let doc = await link.save()
-        res.send("Link adicionado com sucesso")
+        await link.save()
+        res.redirect('/')
     } catch (error) {
-        res.render('index', { error, body: req.body })
+        res.render('add', { error, body: req.body })
     }
 }
 
@@ -40,11 +40,40 @@ const deleteLink = async (req, res) => {
         id = req.body.id
     }
     try {
-        res.send(await Link.findByIdAndDelete(id))
+        await Link.findByIdAndDelete(id)
         res.send(id)
     } catch (error) {
-        res.status(404).send(error)
+        res.send({ error })
     }
 }
 
-module.exports = { redirect, addLink, allLinks, deleteLink }
+const loadLink = async (req, res) => {
+    let id = req.params.id
+    try {
+        let doc = await Link.findById(id)
+        res.render('edit', { error: false, body: doc })
+    } catch (error) {
+        res.staus(404).send(error)
+    }
+}
+
+const editLink = async (req, res) => {
+    let link = {}
+    link.title = req.body.title
+    link.description = req.body.description
+    link.url = req.body.url
+
+    let id = req.params.id
+    if (!id) {
+        id = req.body.id
+    }
+
+    try {
+        await Link.updateOne({ _id: id }, link)
+        res.redirect('/')
+    } catch {
+        res.render('/edit', { error, body: req.body })
+    }
+}
+
+module.exports = { redirect, addLink, allLinks, deleteLink, loadLink, editLink }
