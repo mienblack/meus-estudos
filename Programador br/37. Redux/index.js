@@ -1,21 +1,22 @@
 const redux = require('redux')
 const createStore = redux.createStore
+const combineReducer = redux.combineReducers
 
-const incrementAction = { type: 'INCREMENT' }
-const decrementAction = { type: 'DECREMENT' }
+const { incrementAction, decrementAction } = require('./actions/CounterActions')
+const { addItemAction } = require('./actions/ListActions')
 
-function counterReducer(state = 0, action) {
+const counterReducer = require('./reducers/CounterReducer')
+const listReducer = require('./reducers/ListReducer')
 
-    switch (action.type) {
-        case 'INCREMENT':
-            return state + 1
-        case 'DECREMENT':
-            return state - 1
-        default:
-            return state
-    }
-}
+const allReducers = combineReducer({
+    counter: counterReducer,
+    list: listReducer
+})
 
-const store = createStore(counterReducer)
-
-store.subscribe(() => { console.log(store.getAtate()) })
+const store = createStore(allReducers)
+console.log(store.getState())
+store.subscribe(() => { console.log(store.getState()) })
+store.dispatch(incrementAction(2))
+store.dispatch(decrementAction())
+store.dispatch(addItemAction("item 1"))
+store.dispatch(incrementAction(3))
