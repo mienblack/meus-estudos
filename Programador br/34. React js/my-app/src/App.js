@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Header from './Header'
 import Counter from './Counter'
 import './App.css';
@@ -6,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-  const [show,setShow] = useState(true)
+  const [show, setShow] = useState(true)
   let time = 0
 
   useEffect(() => {

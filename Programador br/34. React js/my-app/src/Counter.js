@@ -65,19 +65,19 @@ class Counter extends React.Component {
     shouldComponentUpdate() {
         return true
     }
-    
-    componentWillUnmount(){
+
+    componentWillUnmount() {
         console.log("Unmount DONE")
     }
 
-render() {
-    return (
-        <div>
-            <h1>Counter: {this.state.count}</h1>
-            <button onClick={this.add} >add</button>
-        </div>
-    )
-}
+    render() {
+        return (
+            <div>
+                <h1>Counter: {this.state.count}</h1>
+                <button onClick={this.add} >add</button>
+            </div>
+        )
+    }
 }
 
 
