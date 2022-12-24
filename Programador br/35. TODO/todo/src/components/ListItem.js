@@ -10,7 +10,7 @@ function DoneImg(props) {
     }
 }
 
-function ListItem(props) {
+export default function ListItem(props) {
 
     return (<li>
         <Card className={props.item.done ? "done item" : "item"}>
@@ -22,5 +22,3 @@ function ListItem(props) {
         </Card>
     </li>)
 }
-
-export default ListItem

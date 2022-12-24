@@ -1,10 +1,10 @@
 import Card from "./Card"
 
-function Modal(props) {
+export default function Modal(props) {
 
     function hideModal(e) {
         let target = e.target
-        if (target.id == "modal") {
+        if (target.id === "modal") {
             props.onHideModal()
         }
         console.log(target)
@@ -18,5 +18,3 @@ function Modal(props) {
         </div>
     )
 }
-
-export default Modal

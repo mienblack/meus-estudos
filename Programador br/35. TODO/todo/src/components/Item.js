@@ -1,5 +1,5 @@
 
-class Item{
+export default class Item {
 
     static lastId = 0
 
@@ -9,5 +9,3 @@ class Item{
         this.done = false
     }
 }
-
-export default Item

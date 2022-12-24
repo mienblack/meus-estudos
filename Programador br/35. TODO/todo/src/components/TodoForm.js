@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function TodoForm(props) {
+export default function TodoForm(props) {
 
     const [text, setText] = useState('')
 
@@ -17,14 +17,12 @@ function TodoForm(props) {
             props.onAddItem(text)
             setText("")
         }
-    }   
+    }
     return (
 
         <form>
-            <input type="text" onChange={handleChange} value={text}/>
+            <input type="text" onChange={handleChange} value={text} />
             <button onClick={addItem}>Add</button>
         </form>
     )
 }
-
-export default TodoForm

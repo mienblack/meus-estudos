@@ -1,7 +1,7 @@
 import React from "react";
 import ListItem from "./ListItem"
 
-function List(props) {
+export default function List(props) {
 
     return (
         <ul>
@@ -9,5 +9,3 @@ function List(props) {
         </ul>
     )
 }
-
-export default List

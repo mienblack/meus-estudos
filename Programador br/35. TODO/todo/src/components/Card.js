@@ -1,12 +1,10 @@
 import React from "react";
 
-function Card(props) {
+export default function Card(props) {
 
-    return(
+    return (
         <div className={props.className ? `${props.className} card` : "card"}>
             {props.children}
         </div>
     )
 }
-
-export default Card
