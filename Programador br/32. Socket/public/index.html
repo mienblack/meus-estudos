@@ -11,14 +11,13 @@
 <body>
     <div id="list"></div>
 
+    <script src="/socket.io/socket.io.js"></script>
     <script>
-        fetch('/list').then(res => res.json()).then(data => {
-            let list = '<ul>'
-            data.map(name => {
-                list += `<li>${name}</li>`
-            })
-            list += '</ul>'
-            document.querySelector('#list').innerHTML = list
+
+        const socket = io('http://localhost:3000')
+
+        socket.on('hello', (data) => {
+            console.log(data.msg)
         })
     </script>
 </body>

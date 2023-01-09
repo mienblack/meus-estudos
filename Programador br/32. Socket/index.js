@@ -1,16 +1,18 @@
 const express = require('express')
+const socketIO = require('socket.io')
 const path = require('path')
 const app = express()
 
-const list = ["Damien", "Felipe", "Costa", "Pereira"]
-console.log(list)
-
-app.get('/list', (req, res) => {
-    res.send(list)
-})
-
 app.use('/', express.static(path.join(__dirname, 'public')))
 
-app.listen(3000, () => {
+const server = app.listen(3000, () => {
     console.log("Listening")
+})
+
+const io = socketIO(server)
+
+io.on('connection', (socket) => {
+    console.log('New Connection')
+
+    socket.broadcast.emit('hello', { msg: `Welcome new user!` })
 })
