@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <style>
+        input {
+            display: block;
+            margin-bottom: 5px;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="">
+        Nome:
+        <input type="text" autofocus required placeholder="tipo texto">
+    </label>
+    <input type="date" name="" id="">
+    <input type="email" placeholder="tipo email" autocomplete="email" patern=".+gmail\.com\.br">
+    <input type="password" placeholder="Digite a sua senha" required pattern="[0-9a-fA-F]{4,8}" autocomplete="on">
+    <input type="url" placeholder="http://example.com">
+    <input type="file" accept="text/*" multiple>
+    <input type="color">
+    <label for="sub">Receber notificações: </label>
+    <input type="checkbox" name="sub" id="sub" checked>
+    <input type="hidden" id="time-stamp" name="time-stamp" value="21837y89">
+    <textarea name="msg" id="msg" minlength="50" maxlength="200"></textarea>
+    <select name="carselect" id="carselect">
+        <option value="fiat">fiat</option>
+        <option value="audi">audi</option>
+        <option value="bmw">bmw</option>
+        <option value="chevrolet">chevrolet</option>
+        <optgroup>
+            <option value="porco">porco</option>
+            <option value="cachorro">audi</option>
+        </optgroup>
+    </select>
+
+    <fieldset>
+        <legend>Tomar café?</legend>
+        <label for="yes">Sim</label>
+        <input type="radio" checked id="yes" value="yes">
+        <label for="no">Não</label>
+        <input type="radio" id="no" value="no">
+    </fieldset>
+
+    <input type="search" placeholder="pesquise">
+
+    <input type="number" min="0" max="99" placeholder="digite números">
+    <input type="range" min="0" max="10" step="0.5">
+
+    <input type="text" value="Input" disabled placeholder="tipo texto">
+    <input type="text" placeholder="tipo texto" value="Input" readonly>
+    <input type="text" form="myform" name="text" placeholder="tipo texto">
+
+    <form id="myform"></form>
+</body>
+
+</html>

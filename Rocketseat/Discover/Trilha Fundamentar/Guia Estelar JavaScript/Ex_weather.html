@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function transformDegree(degree) {
+            const includeCelsius = degree.toLowerCase().includes('c')
+            const includeFahrenheit = degree.toLowerCase().includes('f')
+
+            if (!includeCelsius && !includeFahrenheit) {
+                throw new Error('Grau não identificado')
+            }
+
+            let updatedDegree = Number(degree.toLowerCase().replace('f', ''))
+            let conversion = (fahrenheit) => (fahrenheit - 32) * 5 / 9
+            let degreeUnit = 'C'
+
+            if (includeCelsius) {
+                updatedDegree = Number(degree.toLowerCase().replace('c', ''))
+                conversion = (celsius) => celsius * 9 / 5 + 32
+                degreeUnit = 'F'
+            }
+
+
+
+            return conversion(updatedDegree) + degreeUnit
+        }
+
+        try {
+            console.log(transformDegree('50C'))
+            //transformDegree('20C')
+            //transformDegree('20Z')
+        } catch (e) {
+            console.log(e.message)
+        }
+    </script>
+</body>
+
+</html>
