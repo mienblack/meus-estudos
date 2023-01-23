@@ -1,5 +1,12 @@
+import Head from "next/head"
+
 export default function About() {
     return (
-        <h1>Página  About</h1>
+        <>
+            <Head>
+                <title>Sobre Nós</title>
+            </Head>
+            <h1>Sobre Nós</h1>
+        </>
     )
 }

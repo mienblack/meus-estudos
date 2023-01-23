@@ -1,0 +1,11 @@
+.todolist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.todolist li {
+    border-bottom: 1px solid #555;
+}
