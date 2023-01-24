@@ -9,3 +9,11 @@
 .todolist li {
     border-bottom: 1px solid #555;
 }
+
+.todolist a {
+    color: #444;
+}
+
+.todolist a:hover {
+    text-decoration: underline;
+}
