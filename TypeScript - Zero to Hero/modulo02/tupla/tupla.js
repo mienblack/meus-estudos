@@ -6,4 +6,11 @@ console.log(pessoa);
 // Acessando o valor da tupla
 console.log(pessoa[1]);
 // lableled tuple
+let listaFrutas = [
+    'Abacaxi',
+    'Maçã',
+    'Uva',
+    'Pera',
+    'Kiwi',
+];
 console.log();

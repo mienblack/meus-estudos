@@ -8,4 +8,11 @@ console.log(pessoa);
 console.log(pessoa[1]);
 
 // lableled tuple
+let listaFrutas: [string, ...string[]] = [
+  'Abacaxi',
+  'Maçã',
+  'Uva',
+  'Pera',
+  'Kiwi',
+];
 console.log();
