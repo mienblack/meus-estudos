@@ -1,8 +1,0 @@
-Nesse momento é muito importante que você pare e tente fazer o projeto, assim que terminar continue com as aulas. Na sequência veremos a resolução passo a passo.​
-
-Os arquivos com o modelo e as imagens do projeto estão disponíveis para downlaod abaixo.
-
-    Fonte: Open Sans (google fonts)
-    Cores das fontes: #555, #111
-    Cor dos links: #fd8a24
-    Cor da top bar e da footer: #333

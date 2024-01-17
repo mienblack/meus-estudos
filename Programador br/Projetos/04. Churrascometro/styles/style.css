@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    max-width: 300px;
+    margin: auto;
+    background-color: lightsteelblue;
+    padding: 20px;
+}
+
+input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}   
+
+input[type="submit"] {
+    padding: 5px;
+}
